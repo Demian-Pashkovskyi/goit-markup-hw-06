@@ -276,9 +276,8 @@ ul {
 	transform: translate(-50%, -50%) scale(1);
 	visibility: visible;
 
-	/* padding: 8px; */
+	padding: 40px;
 	width: 528px;
-	height: 581px;
 	background-color: var(--primery-fon-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
@@ -291,7 +290,7 @@ ul {
 	margin: 8px;
 
 	position: absolute;
-	display: block;
+	display: flex;
 	height: 30px;
 	width: 30px;
 	border-radius: 50%;
@@ -301,6 +300,55 @@ ul {
 	background-color: white;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	/* right: 110px; */
+}
+.name-modal {
+	margin-bottom: 12px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 700px;
+	font-size: 20px;
+	line-height: 1.15;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: var(--primery-text-color);
+}
+
+textarea {
+	resize: none;
+	width: 448px;
+	height: 120px;
+	padding: 12px 16px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+.form-field textarea::placeholder {
+	color: rgba(117, 117, 117, 0.5);
+}
+
+.form-modal {
+	width: 448px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-field {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.form-label {
+	margin-right: auto;
+	margin-bottom: 4px;
+}
+
+.form-input {
+	font-size: 12px;
+	padding: 11px 12px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	box-sizing: border-box;
+	border-radius: 4px;
 }
 
 /*button*/
@@ -983,8 +1031,6 @@ img {
 .icons:focus {
 	background-color: var(--accent-color);
 	/* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-}
-.footer-container {
 }
 
 .subscription-container {
