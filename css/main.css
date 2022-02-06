@@ -1110,8 +1110,16 @@ img {
 	font-weight: 700px;
 	font-size: 16px;
 	line-height: 1.88;
-	align-items: center;
-	text-align: center;
+	/* align-items: center;
+	text-align: center; */
 	letter-spacing: 0.06em;
 	color: var(--text-color-footer);
+	display: flex;
+}
+
+.subscription-button-snd-icon {
+	width: 24px;
+	height: 24px;
+	fill: currentColor;
+	margin-left: 10px;
 }
