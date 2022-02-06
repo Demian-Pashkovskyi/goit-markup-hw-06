@@ -351,6 +351,19 @@ textarea {
 	border-radius: 4px;
 }
 
+.form-input:focus + .form-label,
+.form-input:hover + .form-label {
+	color: blue;
+	background-color: brown;
+	border: solid green;
+}
+
+.form-label:focus + .form-input,
+.form-label:hover + .form-input {
+	color: green;
+	border: solid red;
+}
+
 .form-field-policy {
 	margin-top: 20px;
 	margin-bottom: 30px;
