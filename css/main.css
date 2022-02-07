@@ -270,6 +270,7 @@ ul {
 }
 
 .modal {
+	display: block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -299,17 +300,26 @@ ul {
 	background-position: center;
 	background-color: white;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	/* right: 110px; */
+	transition: fill 250ms var(--timing-translation);
 }
+
+.close-modal:focus icon-Modal,
+.close-modal:hover .icon-Modal {
+	fill: var(--accent-color);
+	box-sizing: border-box;
+	transition: fill 250ms var(--timing-translation);
+}
+
 .name-modal {
+	margin-bottom: 12px;
 	font-family: Roboto;
 	font-style: normal;
-	font-weight: 700px;
+	font-weight: bold;
 	font-size: 20px;
 	line-height: 1.15;
 	text-align: center;
 	letter-spacing: 0.03em;
-	color: var(--primery-text-color);
+	color: #212121;
 }
 
 textarea {
@@ -326,6 +336,7 @@ textarea {
 }
 
 .form-modal {
+	display: block;
 	margin-top: 12px;
 	width: 448px;
 	margin-left: auto;
@@ -333,23 +344,19 @@ textarea {
 }
 
 .form-field {
-	display: flex;
 	position: relative;
+	display: flex;
 
 	flex-direction: column;
 	margin-bottom: 10px;
 }
 
 .form-label {
-	position: relative;
-	display: flex;
 	margin-right: auto;
 	margin-bottom: 4px;
 }
 
 .form-input {
-	position: relative;
-	display: flex;
 	font-size: 12px;
 	padding: 0;
 	padding-left: 42px;
@@ -360,7 +367,6 @@ textarea {
 }
 
 .form-input:focus {
-	color: var(--accent-color);
 	transition: border 250ms var(--timing-translation);
 	border: 1px solid var(--accent-color);
 	box-sizing: border-box;
@@ -368,18 +374,39 @@ textarea {
 	outline: none;
 }
 
+.form-input:focus + .modal-icons {
+	fill: var(--accent-color);
+	box-sizing: border-box;
+	transition: fill 250ms var(--timing-translation);
+}
+
 .modal-icons {
 	position: absolute;
-	display: block;
-	width: 18px;
 	height: 18px;
-	left: 12px;
-	transform: translateY(100%);
+	width: 18px;
+	display: block;
+	left: 0;
 	bottom: 50%;
-	/* fill: black; */
-	color: cyan;
-	/* background: brown; */
-	/* background-color: darkblue; */
+	margin-left: 11px;
+	transform: translateY(100%);
+	align-items: center;
+}
+
+.modal-icons-policy {
+	position: absolute;
+	height: 15px;
+	width: 16px;
+	display: block;
+	left: 0;
+	bottom: 81%;
+	margin-left: 11px;
+	transform: translateY(100%);
+	align-items: center;
+	justify-content: center;
+	background-position: center;
+	border-radius: 2px solid;
+	fill: currentColor;
+	background-color: black;
 }
 
 .form-textera {
@@ -402,19 +429,25 @@ textarea {
 }
 
 .form-field-policy {
+	position: relative;
 	margin-top: 20px;
 	margin-bottom: 30px;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 .form-input-policy {
 	margin-right: 8px;
 	width: 16px;
 	height: 15px;
-	background-color: var(--primery-text-color);
+	background-color: var(--primery-fon-color);
+	background: var(--primery-fon-color);
+	background-origin: border-box;
 }
 
 .form-label-policy {
+	display: flex;
+	justify-content: center;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
