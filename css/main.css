@@ -392,23 +392,6 @@ textarea {
 	align-items: center;
 }
 
-.modal-icons-policy {
-	position: absolute;
-	height: 15px;
-	width: 16px;
-	display: block;
-	left: 0;
-	bottom: 81%;
-	margin-left: 11px;
-	transform: translateY(100%);
-	align-items: center;
-	justify-content: center;
-	background-position: center;
-	border-radius: 2px solid;
-	fill: currentColor;
-	background-color: black;
-}
-
 .form-textera {
 	padding: 12px 16px;
 	font-style: normal;
@@ -429,31 +412,76 @@ textarea {
 }
 
 .form-field-policy {
+	display: flex;
 	position: relative;
 	margin-top: 20px;
 	margin-bottom: 30px;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 .form-input-policy {
-	margin-right: 8px;
+	/* appearance: none; */
+	display: flexbox;
+	align-items: center;
+	justify-content: center;
+	transform: 0;
+	margin-right: 9px;
 	width: 16px;
 	height: 15px;
 	background-color: var(--primery-fon-color);
 	background: var(--primery-fon-color);
-	background-origin: border-box;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	box-sizing: border-box;
+	border-radius: 4px;
+	transition: appearance 250ms var(--timing-translation);
+	transition: border-color 250ms var(--timing-translation);
 }
 
 .form-label-policy {
-	display: flex;
+	display: inline-block;
+	content: "";
 	justify-content: center;
+	align-items: center;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	color: #757575;
+}
+
+.form-input-policy:checked {
+	appearance: none;
+	border-color: var(--primery-fon-color);
+	transition: appearance 250ms var(--timing-translation);
+	/* transition: border-color 1250ms var(--timing-translation); */
+	transition: border-color 250ms var(--timing-translation);
+}
+
+.form-input-policy:checked + .modal-icons-policy {
+	background-color: var(--accent-color);
+	border-radius: 2px;
+	fill: currentColor;
+	fill: var(--primery-fon-color);
+}
+
+.modal-icons-policy {
+	position: absolute;
+	height: 15px;
+	width: 16px;
+	display: block;
+	left: 0;
+	top: -55%;
+	margin-left: 10px;
+	transform: translateY(100%);
+	align-items: center;
+	justify-content: center;
+	background-position: center;
+	border-radius: 2px solid var(--primery-text-color);
+	fill: currentColor;
+	fill: none;
+	background-color: none;
+	transition: fill 250ms var(--timing-translation), background-color 250ms var(--timing-translation);
 }
 
 .form-button {
