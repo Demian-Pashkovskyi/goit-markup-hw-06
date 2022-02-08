@@ -403,7 +403,7 @@ textarea {
 }
 
 .form-textera:focus {
-	color: var(--accent-color);
+	color: var(--primery-text-color);
 	transition: border 250ms var(--timing-translation);
 	border: 1px solid var(--accent-color);
 	box-sizing: border-box;
@@ -425,7 +425,7 @@ textarea {
 	align-items: center;
 	justify-content: center;
 	transform: 0;
-	margin-right: 9px;
+	margin-right: 10px;
 	width: 16px;
 	height: 15px;
 	background-color: var(--primery-fon-color);
@@ -438,7 +438,7 @@ textarea {
 }
 
 .form-label-policy {
-	display: inline-block;
+	display: flex;
 	content: "";
 	justify-content: center;
 	align-items: center;
@@ -454,7 +454,6 @@ textarea {
 	appearance: none;
 	border-color: var(--primery-fon-color);
 	transition: appearance 250ms var(--timing-translation);
-	/* transition: border-color 1250ms var(--timing-translation); */
 	transition: border-color 250ms var(--timing-translation);
 }
 
@@ -471,9 +470,11 @@ textarea {
 	width: 16px;
 	display: block;
 	left: 0;
-	top: -55%;
+	top: -50%;
 	margin-left: 10px;
 	transform: translateY(100%);
+	background-size: contain;
+	background-origin: border-box;
 	align-items: center;
 	justify-content: center;
 	background-position: center;
